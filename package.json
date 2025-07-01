@@ -1,0 +1,39 @@
+{
+  "name": "utility-pickle",
+  "version": "1.0.0",
+  "description": "",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run clean && tsup --dts-resolve",
+    "dev": "npm run clean && tsup --watch --dts-resolve",
+    "clean": "if exist dist rd /s /q dist",
+    "test": "jest"
+  },
+  "homepage": "https://github.com/chrisitopherus/utility-pickle#readme",
+  "bugs": {
+    "url": "https://github.com/chrisitopherus/utility-pickle/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisitopherus/utility-pickle.git"
+  },
+  "license": "MIT",
+  "author": "chrisitopherus",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.8",
+    "@typescript-eslint/eslint-plugin": "^8.35.1",
+    "@typescript-eslint/parser": "^8.35.1",
+    "eslint": "^9.30.0",
+    "jest": "^30.0.3",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.8.1",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}
