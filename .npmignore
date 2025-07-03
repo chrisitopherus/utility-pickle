@@ -1,0 +1,22 @@
+# source files
+src/
+
+# test files
+tests/
+coverage/
+jest.config.ts
+
+# docs
+docs/
+
+# configs
+tsup.config.ts
+tsconfig.json
+tsconfig.jest.json
+typedoc.json
+.vscode/
+.eslintrc.json
+
+# packages
+node_modules/
+package-lock.json

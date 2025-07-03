@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    // Language and Environment
-    "experimentalDecorators": true,
     "target": "ESNext",
     "useDefineForClassFields": false,
     // Emit
@@ -12,7 +10,6 @@
     "outDir": "dist",
     "removeComments": false,
     "sourceMap": true,
-    "emitDecoratorMetadata": true,
     // Modules
     "allowArbitraryExtensions": false,
     "allowImportingTsExtensions": false,
