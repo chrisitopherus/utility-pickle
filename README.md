@@ -52,7 +52,6 @@ export class Pickle {
   public static readonly pipe = Pipe;
   public static readonly transformation = Transformation;
   public static readonly regex = Regex;
-  private constructor() {}
 }
 ```
 
@@ -67,6 +66,9 @@ String and number utilities along with a helper to start pipelines via `Transfor
 
 ### Regex
 Useful regular expression constants like whitespace or digit matches, located in `src/regex/regex.ts`.
+
+## API Documentation
+**[View the full API documentation here.](https://chrisitopherus.github.io/utility-pickle/)**
 
 ## License
 
