@@ -1,2 +1,1 @@
-export { Pipe } from "./pipe/pipe";
-export { Guard } from "./guard/guard";
+export { Pickle } from "./pickle";
