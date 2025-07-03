@@ -2,8 +2,6 @@ import { Guard } from "../guard/guard";
 import { Regex } from "../regex/regex";
 
 /**
- * StringTransformation
- * 
  * A static utility class for common and advanced string transformation and manipulation tasks.
  */
 export class StringTransformation {

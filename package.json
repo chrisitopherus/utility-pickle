@@ -11,7 +11,9 @@
     "build": "npm run clean && tsup --dts-resolve",
     "dev": "npm run clean && tsup --watch --dts-resolve",
     "clean": "if exist dist rd /s /q dist",
-    "test": "jest"
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "coverage:open": "npm run coverage && npx open-cli coverage/lcov-report/index.html"
   },
   "homepage": "https://github.com/chrisitopherus/utility-pickle#readme",
   "bugs": {
