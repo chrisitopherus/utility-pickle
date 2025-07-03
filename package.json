@@ -1,7 +1,8 @@
 {
   "name": "utility-pickle",
   "version": "0.1.0",
-  "description": "",
+  "description": "Collection of TypeScript helpers for runtime guards, function pipelines, transformations and handy regex patterns.",
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
@@ -16,6 +17,14 @@
     "coverage:open": "npm run coverage && npx open-cli coverage/lcov-report/index.html",
     "docs": "typedoc"
   },
+  "keywords": [
+    "typescript",
+    "guard",
+    "pipe",
+    "transformation",
+    "regex",
+    "utility"
+  ],
   "homepage": "https://github.com/chrisitopherus/utility-pickle#readme",
   "bugs": {
     "url": "https://github.com/chrisitopherus/utility-pickle/issues"
