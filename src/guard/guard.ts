@@ -152,12 +152,27 @@ export class Guard {
     }
 
     /**
-     * Checks if a value is a plain object (excluding arrays and null).
+     * Checks if a value is an object (excluding arrays and {@link Nullable}).
      * @param value The value to check.
-     * @returns `True` if `value` is a `non-null object`.
+     * @returns `True` if `value` is an object, `false` otherwise.
      */
     public static isObject(value: unknown): value is Record<PropertyName, unknown> {
         return typeof value === "object" && this.isNotNullish(value) && !this.isArray(value);
+    }
+
+    /**
+     * Checks if a value is a "plain" object, meaning it was created by the {@link Object}
+     * constructor or with an object literal (`{}`).
+     * 
+     * This guard is stricter than {@link isObject} because it excludes instances of custom classes,
+     * which {@link isObject} would otherwise identify as objects.
+     * @param value The value to check.
+     * @returns `True` if `value` is a plain object, `false` otherwise.
+     */
+    public static isPlainObject(value: unknown): value is Record<PropertyName, unknown> {
+        if (!this.isObject(value)) return false;
+        const proto = Object.getPrototypeOf(value);
+        return proto === null || proto === Object.prototype;
     }
 
     /**
