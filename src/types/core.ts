@@ -19,5 +19,20 @@ export type Nullish = undefined | null;
 /**
  * Represents a type `T` that may also be `null` or `undefined`.
  * Commonly used to annotate values that may be missing or uninitialized.
+ * 
+ * @template T - The type that could be nullish.
  */
 export type Nullable<T> = T | Nullish;
+
+/**
+ * Represents a recursive partial version of a given type `T`.
+ * 
+ * @template T - The type to transform into a deeply partial version.
+ */
+export type DeepPartial<T> = {
+    [P in keyof T]?: T[P] extends object
+    ? T[P] extends Function
+    ? T[P]
+    : DeepPartial<T[P]>
+    : T[P];
+};
