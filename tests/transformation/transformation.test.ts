@@ -32,7 +32,7 @@ describe("Transformation", () => {
         });
     });
 
-    describe("string and number APIs", () => {
+    describe("transformation APIs", () => {
         it("should delegate to StringTransformation", () => {
             expect(Transformation.string.toUpper("abc")).toBe("ABC");
             expect(Transformation.string.toSnakeCase("FooBar")).toBe("foo_bar");
@@ -41,6 +41,13 @@ describe("Transformation", () => {
         it("should delegate to NumberTransformation", () => {
             expect(Transformation.number.toInt("42")).toBe(42);
             expect(Transformation.number.toInt(12.8)).toBe(12);
+        });
+
+        it("should delegate to ObjectTransformation", () => {
+            const base = { a: 1, b: { c: 2 } };
+            const patch = { b: { c: 3 } };
+            const result = Transformation.object.patch(base, patch);
+            expect(result).toEqual({ a: 1, b: { c: 3 } });
         });
     });
 });
