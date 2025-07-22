@@ -161,7 +161,7 @@ export class Guard {
     }
 
     /**
-     * Checks if a value is a "plain" object, meaning it was created by the {@link Object}
+     * Checks if a value is a "plain" object, meaning it was created by the object
      * constructor or with an object literal (`{}`).
      * 
      * This guard is stricter than {@link isObject} because it excludes instances of custom classes,
