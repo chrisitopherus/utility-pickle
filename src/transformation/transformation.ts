@@ -1,6 +1,7 @@
 import { Pipe } from "../pipe/pipe";
 import { PipeFunc } from "../types/pipe/pipe";
 import { NumberTransformation } from "./numberTransformation";
+import { ObjectTransformation } from "./objectTransformation";
 import { StringTransformation } from "./stringTransformation";
 
 /**
@@ -17,6 +18,11 @@ export class Transformation {
      * Provides access to all number transformation utilities.
      */
     public static readonly number = NumberTransformation;
+
+    /**
+     * Provides access to all object transformation utilities.
+     */
+    public static readonly object = ObjectTransformation;
 
     /**
      * Prevents instantiation of the utility class.
