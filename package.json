@@ -1,6 +1,6 @@
 {
   "name": "utility-pickle",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Collection of TypeScript helpers for runtime guards, function pipelines, transformations and handy regex patterns.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
